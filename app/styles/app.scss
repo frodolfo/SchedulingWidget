@@ -1,0 +1,53 @@
+header {
+  color: #fff;
+  background-color: #105aa0;
+  padding: 15px 14px;
+}
+
+main {
+  padding: 24px 0;
+}
+
+footer {
+  padding: 10px 24px;
+  background-color: #333333;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin: 0;
+}
+
+.tiny {
+  font-size: 0.85rem;
+  font-weight: 300;
+  line-height: 0.45rem;
+}
+
+.container {
+  background-color: #f2f2f2;
+}
+
+.sign-in {
+  background-color: #f2f2f2;
+  padding: 5px 24px;
+}
+
+.service-container {
+  background-color: #fff;
+}
+
+.service-description {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.row {
+  padding: 16px 24px;
+  border-bottom: 1px solid #ddd;
+  align-items: center;
+}
