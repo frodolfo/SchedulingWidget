@@ -1,14 +1,62 @@
+.container {
+  display: grid;
+
+  grid-template-areas:
+    "header header"
+    "nav content"
+    "footer footer";
+
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: 10px;
+
+  height: 100vh;
+}
+
 header {
+  grid-area: header;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   color: #fff;
   background-color: #105aa0;
-  padding: 15px 14px;
+  padding: 15px 20px;
+
+  div {
+    &:first-child {
+      width: 300px;
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: 1.5rem;
+    }
+
+    span {
+      margin-left: 10px;
+    }
+  }
+}
+
+nav {
+  grid-area: nav;
+  background-color: #fff;
+  width: 300px;
 }
 
 main {
+  grid-area: content;
   padding: 0;
+
+  #content {
+    background-color: #f0f4f7;
+    // width: 100%;
+    padding: 20px;
+  }
 }
 
 footer {
+  grid-area: footer;
   padding: 10px 24px;
   background-color: #333333;
 }
@@ -43,11 +91,17 @@ button {
 .tiny {
   font-size: 0.85rem;
   font-weight: 300;
-  line-height: 0.45rem;
+  line-height: 1.45rem;
 }
 
-.container {
-  background-color: #f2f2f2;
+.link {
+  color: #105aa0;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .sign-in {
@@ -57,7 +111,8 @@ button {
 
 .service {
   &-container {
-    background-color: #fff;
+    width: 100%;
+    // background-color: #fff;
   }
 
   &-description {
@@ -68,19 +123,11 @@ button {
 
 .row {
   display: flex;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   justify-content: space-between;
   padding: 20px;
+  margin-bottom: 20px;
   border-bottom: 1px solid #ddd;
   align-items: center;
-
-  &:hover {
-    background-color: #f7f7f7;
-  }
-
-  &-heading {
-    display: block;
-    padding: 17px 20px;
-    border-bottom: 1px solid #ddd;
-    align-items: center;
-  }
 }

@@ -2,7 +2,7 @@
 
 module.exports = function (environment) {
   let ENV = {
-    modulePrefix: 'scheduling-widget',
+    modulePrefix: 'SchedulingWidget',
     environment,
     rootURL: '/',
     locationType: 'auto',
@@ -16,21 +16,29 @@ module.exports = function (environment) {
         Date: false,
       },
     },
-
+    contentSecurityPolicy: {
+      // ... other stuff here
+      'connect-src': "'self' https://johnny-appleseed.clientsecure.me",
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-      clientPortalEndpoint:
-        'https://johnny-appleseed.clientsecure.me/client-portal-api/',
+      clientPortalEndpoint: 'https://johnny-appleseed.clientsecure.me',
+      clinicianId: 2,
     },
   };
 
   if (environment === 'development') {
+    ENV.APP.rootElement = '#content';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.contentSecurityPolicy = {
+      // ... other stuff here
+      'connect-src': "'self' https://johnny-appleseed.clientsecure.me",
+    };
   }
 
   if (environment === 'test') {
@@ -47,6 +55,7 @@ module.exports = function (environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+    ENV.APP.rootElement = '#content';
   }
 
   return ENV;

@@ -1,10 +1,6 @@
 <div class="service-container">
   {{!-- {{yield}} --}}
-  <div class="row-heading">
-    <span class="tiny">Request an appointment</span>
-    <h3>Select Service</h3>
-  </div>
-  {{#each list as |item|}}
+  {{!-- {{#each list as |item|}}
     <div class="row">
       <div class="service-dettail">
         <div class="service-description">{item.description}</div>
@@ -14,20 +10,20 @@
         <button type="button">Select</button>
       </div>
     </div>
-  {{/each}}
-  <div class="row">
+  {{/each}} --}}
+  <div class="service row">
     <div class="service-dettail">
       <div class="service-description">Psychiatric Diagnostic Evaluation</div>
-      <div class="tiny">50 minutes</div>
+      <div class="service-duration tiny">50 minutes</div>
     </div>
     <div class="service-select">
       <button type="button">Select</button>
     </div>
   </div>
-  <div class="row">
+  <div class="service row">
     <div class="service-dettail">
       <div class="service-description">Intro Call</div>
-      <div class="tiny">15 minutes</div>
+      <div class="service-duration tiny">15 minutes</div>
     </div>
     <div class="service-select">
       <button type="button">Select</button>

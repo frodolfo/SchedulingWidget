@@ -10,16 +10,51 @@
     {{content-for "head"}}
 
     <link integrity="" rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/scheduling-widget.css">
+    <link integrity="" rel="stylesheet" href="{{rootURL}}assets/SchedulingWidget.css">
 
     {{content-for "head-footer"}}
   </head>
   <body>
+    <div class="container">
+      <header>
+        <div>
+          <h2>Request an Appointment</h2>
+        </div>
+        <div>
+          <span>The Therapy Center</span>
+        </div>
+      </header>
+
+      <nav>
+        <!-- Navigation -->
+        <ul>
+          <li>
+            <div>1</div>
+            <div>
+              <div>CLINICIAN</div>
+              <div><a href="/request/service/?cid=2" class="link">Rob Gross, MFT</a></div>
+            </div>
+          </li>
+          <li>
+            <div>2</div>
+            <div>
+              <div>SELECT A SERVICE</div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <main>
+        <!-- Main content -->
+        <div id="content"></div>
+      </main>
+
+      <footer>
+        <!-- Footer content -->
+      </footer>
+    </div>
     {{content-for "body"}}
-
     <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/scheduling-widget.js"></script>
-
-    {{content-for "body-footer"}}
+    <script src="{{rootURL}}assets/SchedulingWidget.js"></script>
   </body>
 </html>
