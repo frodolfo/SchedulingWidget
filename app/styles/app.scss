@@ -104,6 +104,34 @@ button {
   }
 }
 
+ul {
+  padding-left: 20px;
+
+  li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 14px;
+
+    .circle {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 20px;
+      width: 20px;
+      border: 2px solid #ddd;
+      border-radius: 50%;
+      margin-right: 6px;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start
+    }
+  }
+}
+
 .sign-in {
   background-color: #f2f2f2;
   padding: 5px 24px;

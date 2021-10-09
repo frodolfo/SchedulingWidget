@@ -12,4 +12,5 @@ Router.map(function () {
     this.route('service');
     this.route('location');
   });
+  this.route('service');
 });

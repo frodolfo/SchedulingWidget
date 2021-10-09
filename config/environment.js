@@ -24,7 +24,7 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
       clientPortalEndpoint: 'https://johnny-appleseed.clientsecure.me',
-      clinicianId: 2,
+      corsAnywhereUrl: 'https://cors-anywhere.herokuapp.com'
     },
   };
 

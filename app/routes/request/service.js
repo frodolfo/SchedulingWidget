@@ -10,10 +10,19 @@ export default class RequestServiceRoute extends Route {
   };
 
   async model(params) {
-    return this.store.query('cpt-codes', {
+    // let modelData = this.store.query('cpt-codes', {
+    let modelData = this.store.query('services', {
       filter: {
         clinicianId: params.cid,
       },
     });
+
+    console.log('modelData: ', modelData);
+
+    return modelData;
   }
+
+  // setupController(controller, model) {
+  //   super.setupController(controller, model);
+  // }
 }
