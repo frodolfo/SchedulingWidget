@@ -24,7 +24,6 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
       clientPortalEndpoint: 'https://johnny-appleseed.clientsecure.me',
-      corsAnywhereUrl: 'https://cors-anywhere.herokuapp.com'
     },
   };
 
@@ -35,6 +34,7 @@ module.exports = function (environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.corsAnywhereUrl = 'https://cors-anywhere.herokuapp.com';
     ENV.APP.contentSecurityPolicy = {
       // ... other stuff here
       'connect-src': "'self' https://johnny-appleseed.clientsecure.me",

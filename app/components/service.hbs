@@ -1,0 +1,9 @@
+<div class='row'>
+  <div class='service-detail'>
+    <div class='service-description'>{{@service.description}}</div>
+    <div class='tiny'>{{@service.duration}} minutes</div>
+  </div>
+  <div class='service-select'>
+    <button type='button' {{on 'click' (fn this.showLocations @service.id)}}>Select</button>
+  </div>
+</div>

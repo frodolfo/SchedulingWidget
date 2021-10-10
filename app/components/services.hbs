@@ -1,33 +1,14 @@
 <div class="service-container">
-  {{!-- {{yield}} --}}
-  {{#each model as |item|}}
-    {item}
+  <h2>Available Services</h2>
+  {{#each @model as |service|}}
     <div class="row">
-      <div class="service-dettail">
-        <div class="service-description">{item.description}</div>
-        <div class="tiny">{item.duration} minutes</div>
+      <div class="service-detail">
+        <div class="service-description">{{service.description}}</div>
+        <div class="tiny">{{service.duration}} minutes</div>
       </div>
       <div class="service-select">
-        <button type="button">Select</button>
+        <button type="button" onclick={{action 'showLocations'}}>Select</button>
       </div>
     </div>
   {{/each}}
-  <div class="service row">
-    <div class="service-dettail">
-      <div class="service-description">Psychiatric Diagnostic Evaluation</div>
-      <div class="service-duration tiny">50 minutes</div>
-    </div>
-    <div class="service-select">
-      <button type="button">Select</button>
-    </div>
-  </div>
-  <div class="service row">
-    <div class="service-dettail">
-      <div class="service-description">Intro Call</div>
-      <div class="service-duration tiny">15 minutes</div>
-    </div>
-    <div class="service-select">
-      <button type="button">Select</button>
-    </div>
-  </div>
 </div>
