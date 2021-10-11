@@ -6,12 +6,7 @@ export default class ApplicationAdapter extends RESTAdapter {
       ? `${ENV.APP.corsAnywhereUrl}/${ENV.APP.clientPortalEndpoint}`
       : ENV.APP.clientPortalEndpoint;
 
-  namespace = 'client-portal-api';
+  namespace = ENV.APP.clientPortalNamespace;
 
-  headers = {
-    Accept: 'application/vnd.api+json',
-    'Api-Version': '2020-01-01',
-    'Application-Build-Version': '0.0.1',
-    'Application-Platform': 'web',
-  };
+  headers = ENV.APP.clientPortalHeaders;
 }

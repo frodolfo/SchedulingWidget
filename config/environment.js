@@ -24,6 +24,13 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
       clientPortalEndpoint: 'https://johnny-appleseed.clientsecure.me',
+      clientPortalNamespace: 'client-portal-api',
+      clientPortalHeaders: {
+        Accept: 'application/vnd.api+json',
+        'Api-Version': '2020-01-01',
+        'Application-Build-Version': '0.0.1',
+        'Application-Platform': 'web',
+      },
     },
     GOOGLE_MAPS: {
       API_KEY: 'AIzaSyCjumT8NNt9ldhffQ-hkRa0nV6ZrVr5x-g',
