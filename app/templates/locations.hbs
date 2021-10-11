@@ -1,7 +1,7 @@
 {{page-title "Locations"}}
+<h2>Available Offices</h2>
 <div class="location-container">
-  <h2>Available Offices</h2>
   {{#each @model as |office|}}
-    <Location @office={{office}} />
+    <Location @office={{office}} @address={{office.address}} />
   {{/each}}
 </div>

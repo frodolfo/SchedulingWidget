@@ -16,11 +16,22 @@ export default class LocationsRoute extends Route {
     },
   };
 
+  afterModel(model, transition) {
+    if (model.get('length') === 1) {
+      // this.transitionTo('post', model.get('firstObject'));
+      console.log('we got our model');
+    }
+  }
+
   model(params) {
+    let filterConfig = {
+      clinicianId: params.cid ? params.cid : null,
+      cptCodeId: params.ccid ? params.ccid : null,
+    };
+
     return this.store.query('locations', {
       filter: {
-        clinicianId: params.cid,
-        cptCodeId: params.ccid,
+        ...filterConfig,
       },
     });
   }

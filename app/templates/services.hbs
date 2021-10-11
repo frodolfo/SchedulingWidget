@@ -1,6 +1,6 @@
 {{page-title "Services"}}
+<h2>Available Services</h2>
 <div class="service-container">
-  <h2>Available Services</h2>
   {{#each @model as |service|}}
     <Service @service={{service}} @cid={{this.cid}} @controller={{this}} />
   {{/each}}

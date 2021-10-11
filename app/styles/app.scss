@@ -86,6 +86,10 @@ button {
   &:hover {
     background-color: #105aa0;
   }
+
+  &.wide {
+    width: 100%;
+  }
 }
 
 .tiny {
@@ -150,6 +154,24 @@ ul {
   }
 }
 
+.location {
+  &-map {
+
+  }
+
+  &-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+
+    div {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
 .row {
   display: flex;
   background-color: #fff;
@@ -159,4 +181,10 @@ ul {
   margin-bottom: 20px;
   border-bottom: 1px solid #ddd;
   align-items: center;
+  max-width: 500px;
+}
+
+.ember-google-map {
+  width: 350px;
+  height: 350px;
 }

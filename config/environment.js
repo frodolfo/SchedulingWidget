@@ -25,6 +25,14 @@ module.exports = function (environment) {
       // when it is created
       clientPortalEndpoint: 'https://johnny-appleseed.clientsecure.me',
     },
+    GOOGLE_MAPS: {
+      API_KEY: 'AIzaSyCjumT8NNt9ldhffQ-hkRa0nV6ZrVr5x-g',
+      BASE_URL: 'https://maps.googleapis.com/maps/api/geocode/json'
+    },
+    MAPBOX: {
+      ACCESS_TOKEN: 'pk.eyJ1IjoiZnJvZG9sZm82MTkiLCJhIjoiY2t1bWVrNml6M3I4MTJ6bW5lOGxnZTRuaCJ9.YymQgdSLqYPDJfffTjJM3Q',
+      BASE_URL: 'https://api.mapbox.com/styles/v1/mapbox/streets-v11/static'
+    },
   };
 
   if (environment === 'development') {

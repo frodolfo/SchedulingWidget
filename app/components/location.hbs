@@ -1,11 +1,25 @@
 <div class='row'>
-  <div class='location-detail'>
-    <div class="location-map">[show Google Maps here]</div>
-    <div class='service-description'>{{@office.name}}</div>
-    <div>[show address here]</div>
-    <div class='tiny'>{{@office.phone}}</div>
-    <button type='button' {{on 'click' (fn this.handleClick @office.id)}}>
-      {{this.text}}
-    </button>
+  <div class='location-details'>
+    <div class='location-map'>
+      <Map
+        @lat={{@office.geolocation.lat}}
+        @lng={{@office.geolocation.lng}}
+        @zoom="9"
+        @width="500"
+        @height="500"
+      />
+    </div>
+    <div class='location-description'>{{@office.name}}</div>
+    <div class='location-address'>{{@address}}</div>
+    <div class='location-phone tiny'>{{@office.phone}}</div>
+    <div class="location-select">
+      <button
+        class='wide'
+        type='button'
+        {{on 'click' (fn this.handleClick @office.id)}}
+      >
+        {{this.text}}
+      </button>
+    </div>
   </div>
 </div>

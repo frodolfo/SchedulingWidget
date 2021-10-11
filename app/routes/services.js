@@ -14,10 +14,9 @@ export default class ServicesRoute extends Route {
   };
 
   model(params) {
-    // WORKING
     return this.store.query('services', {
       filter: {
-        clinicianId: params.cid,
+        clinicianId: params.cid ? params.cid : null,
       },
     });
   }
