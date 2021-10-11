@@ -2,7 +2,7 @@
 <div class="service-container">
   <h2>Available Services</h2>
   {{#each @model as |service|}}
-    {{!-- <Service @service={{service}} @id={{service.id}} /> --}}
-    <Service @service={{service}} />
+    {{!-- <Service @service={{service}} @transitionRoute={{(array 'locations' service.id)}} /> --}}
+    <Service @service={{service}} @cid={{this.cid}} />
   {{/each}}
 </div>

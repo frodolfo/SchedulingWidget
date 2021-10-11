@@ -1,8 +1,10 @@
 import Route from '@ember/routing/route';
+import { tracked } from '@glimmer/tracking';
 import { inject as service } from '@ember/service';
 
 export default class ServicesRoute extends Route {
   @service store;
+  @tracked cid = this.cid;
 
   queryParams = {
     cid: {
@@ -58,6 +60,7 @@ export default class ServicesRoute extends Route {
     //     console.log('result: ', result);
     //   });
 
+    // WORKING
     return this.store.query('services', {
       filter: {
         clinicianId: params.cid,

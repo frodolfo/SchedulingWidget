@@ -1,2 +1,8 @@
 {{page-title "Locations"}}
-{{outlet}}
+<div class="location-container">
+  <h2>Available Offices</h2>
+  {{#each @model as |office|}}
+    {{!-- <Service @service={{service}} @transitionRoute={{(array 'locations' service.id)}} /> --}}
+    <Location @office={{office}} />
+  {{/each}}
+</div>
