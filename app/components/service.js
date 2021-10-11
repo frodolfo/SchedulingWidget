@@ -1,25 +1,25 @@
-import Ember from 'ember';
 import Component from '@glimmer/component';
+// import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
 
 export default class ServiceComponent extends Component {
-  text = "Select";
+  // @service router;
+
+  text = 'Select';
 
   get cid() {
     return this.args.cid ?? '';
   }
 
   @action
-  // handleClick(e) {
-  //   console.log('ccid: ', e.target.dataset.ccid);
-  //   console.log('cid: ', e.target.dataset.cid);
-  //   console.log('cid 2: ', this.cid);
-  //   // this.transitionTo(`locations?ccid=${id}&cid=${cid}`);
-  // }
   handleClick(ccid) {
-    console.log('cid: ', this.cid);
-    console.log('ccid: ', ccid);
-    // this.transitionTo(`locations?ccid=${id}&cid=${cid}`);
-  }
+    let controller = this.args.controller;
 
+    if (typeof controller === 'object' && controller.showLocations) {
+      controller.showLocations(this.cid, ccid);
+    }
+
+    // Retrieve current route name
+    // console.log(Ember.getOwner(this).lookup('router:main').get('currentRouteName'));
+  }
 }

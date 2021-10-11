@@ -7,21 +7,5 @@
     <button type='button' {{on 'click' (fn this.handleClick @service.id)}}>
       {{this.text}}
     </button>
-    {{!-- <button
-      type='button'
-      data-cid={{@cid}}
-      data-ccid={{@service.id}}
-      {{on 'click' this.handleClick}}
-    >
-      {{this.text}}
-    </button> --}}
-
-    {{!-- <button
-      type='button'
-      data-id={{@service.id}}
-      {{on 'click' this.handleClick}}
-    >Select</button> --}}
-    {{! <LinkTo @route="locations">Select</LinkTo> }}
-    {{! <LinkTo @role="button" params="">Select</LinkTo> }}
   </div>
 </div>

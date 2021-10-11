@@ -137,10 +137,11 @@ ul {
   padding: 5px 24px;
 }
 
-.service {
+.service, .location {
   &-container {
     width: 100%;
     // background-color: #fff;
+    margin-right: 20px;
   }
 
   &-description {

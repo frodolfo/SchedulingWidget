@@ -1,8 +1,6 @@
-// import JSONAPIAdapter from '@ember-data/adapter/json-api';
 import RESTAdapter from '@ember-data/adapter/rest';
 import ENV from 'SchedulingWidget/config/environment';
 export default class ApplicationAdapter extends RESTAdapter {
-  // export default class ApplicationAdapter extends JSONAPIAdapter {
   host =
     ENV.environment === 'development'
       ? `${ENV.APP.corsAnywhereUrl}/${ENV.APP.clientPortalEndpoint}`
