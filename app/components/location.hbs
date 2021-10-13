@@ -10,13 +10,13 @@
       />
     </div>
     <div class='location-description'>{{@office.name}}</div>
-    <div class='location-address'>{{@address}}</div>
+    <div class='location-address'>{{this.officeLocation}}</div>
     <div class='location-phone tiny'>{{@office.phone}}</div>
     <div class="location-select">
       <button
         class='wide'
         type='button'
-        {{on 'click' (fn this.handleClick @office.id)}}
+        {{on 'click' (fn this.handleClick @office.redirectLink)}}
       >
         {{this.text}}
       </button>

@@ -1,7 +1,12 @@
-{{page-title "Locations"}}
+{{page-title 'Locations'}}
 <h2>Available Offices</h2>
-<div class="location-container">
+<div class='location-container'>
   {{#each @model as |office|}}
-    <Location @office={{office}} @address={{office.address}} />
+    <Location
+      @office={{office}}
+      @geolocation={{office.geolocation}}
+      @address={{office.address}}
+      @redirectLink={{office.links.self}}
+    />
   {{/each}}
 </div>

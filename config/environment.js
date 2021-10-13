@@ -44,6 +44,7 @@ module.exports = function (environment) {
   };
 
   if (environment === 'development') {
+    ENV.rootURL = '/SchedulingWidget';
     ENV.APP.rootElement = '#content';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
